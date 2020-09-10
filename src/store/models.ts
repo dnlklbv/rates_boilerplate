@@ -3,6 +3,7 @@ import { ThunkAction, ThunkDispatch } from 'redux-thunk'
 import { RouterState } from 'connected-react-router'
 
 import { ICommonState } from 'reducers/common'
+import { ICurrencyState } from 'reducers/currency'
 
 export interface IAction<T> extends Action<string> {
   payload?: T
@@ -11,6 +12,7 @@ export interface IAction<T> extends Action<string> {
 export interface IAppState {
   router: RouterState
   common: ICommonState
+  currency: ICurrencyState
 }
 
 export type TAppActionThunk<TPayload, TReturn = void, > = ThunkAction<
@@ -25,3 +27,5 @@ export type TAppDispatchThunk<TPayload> = ThunkDispatch<
   unknown,
   IAction<TPayload>
 >
+
+export type TGetStateThunk = () => IAppState

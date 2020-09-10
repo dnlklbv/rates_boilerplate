@@ -1,4 +1,5 @@
 import React from 'react'
+import 'antd/dist/antd.css'
 import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
 import store from 'store'
