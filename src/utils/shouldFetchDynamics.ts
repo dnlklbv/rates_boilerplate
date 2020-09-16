@@ -8,7 +8,7 @@ const shouldFetchDynamics = (currenciesDynamics: ICurrenciesDynamics | null, cur
   const currencyDynamics = currenciesDynamics[currency.id]
   if (!currencyDynamics) return true
 
-  const lastCurrencyDynamic = currencyDynamics[currencyDynamics.length]
+  const lastCurrencyDynamic = currencyDynamics[currencyDynamics.length - 1]
   if (!isToday(lastCurrencyDynamic.date)) return true
 
   return false
